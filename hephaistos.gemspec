@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Hephaistos - Simple search CLI tool.}
   spec.description   = %q{Search everything from StackOverFlow, Rubygems.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "http://www.todayifoundout.net/"
   spec.license       = "MIT"
 
   spec.files         = Dir['lib/**/*.rb'] + Dir['bin/*']
