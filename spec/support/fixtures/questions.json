@@ -1,0 +1,274 @@
+{
+  "items": [
+    {
+      "tags": [
+        "ruby-on-rails",
+        "ruby",
+        "ruby-on-rails-4",
+        "authenticity-token"
+      ],
+      "owner": {
+        "reputation": 4081,
+        "user_id": 381716,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/6609a5c2a0d530f8c1197adb2bce7148?s=128&d=identicon&r=PG",
+        "display_name": "alexcoco",
+        "link": "http://stackoverflow.com/users/381716/alexcoco"
+      },
+      "is_answered": true,
+      "view_count": 77058,
+      "accepted_answer_id": 16264496,
+      "answer_count": 9,
+      "score": 123,
+      "last_activity_date": 1454959558,
+      "creation_date": 1367115933,
+      "last_edit_date": 1402705404,
+      "question_id": 16258911,
+      "link": "http://stackoverflow.com/questions/16258911/rails-4-authenticity-token",
+      "title": "Rails 4 Authenticity Token"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "ruby"
+      ],
+      "owner": {
+        "reputation": 462,
+        "user_id": 216873,
+        "user_type": "registered",
+        "accept_rate": 53,
+        "profile_image": "https://www.gravatar.com/avatar/bbe0f2128a43d01aae61200bc1bb6ef5?s=128&d=identicon&r=PG",
+        "display_name": "Guillermo Guerini",
+        "link": "http://stackoverflow.com/users/216873/guillermo-guerini"
+      },
+      "is_answered": true,
+      "view_count": 33692,
+      "accepted_answer_id": 10234521,
+      "answer_count": 11,
+      "score": 22,
+      "last_activity_date": 1454884264,
+      "creation_date": 1334859866,
+      "question_id": 10234406,
+      "link": "http://stackoverflow.com/questions/10234406/ruby-methods-and-optional-parameters",
+      "title": "Ruby Methods and Optional parameters"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "ruby",
+        "rspec",
+        "cucumber",
+        "rspec3"
+      ],
+      "owner": {
+        "reputation": 7134,
+        "user_id": 650475,
+        "user_type": "registered",
+        "accept_rate": 95,
+        "profile_image": "https://www.gravatar.com/avatar/a7e05f5df16cb68c49d913edfabf9065?s=128&d=identicon&r=PG",
+        "display_name": "Grant Birchmeier",
+        "link": "http://stackoverflow.com/users/650475/grant-birchmeier"
+      },
+      "is_answered": true,
+      "view_count": 104,
+      "accepted_answer_id": 34126610,
+      "answer_count": 2,
+      "score": 2,
+      "last_activity_date": 1454833247,
+      "creation_date": 1437792613,
+      "last_edit_date": 1454833247,
+      "question_id": 31622385,
+      "link": "http://stackoverflow.com/questions/31622385/upgrading-to-rspec-3-and-following-deprecation-notice-results-in-undefined-meth",
+      "title": "Upgrading to RSpec 3 and following deprecation notice results in &quot;undefined method &#39;allow&#39;&quot;"
+    },
+    {
+      "tags": [
+        "ruby-on-rails"
+      ],
+      "owner": {
+        "reputation": 15,
+        "user_id": 5799625,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/95862bbe704000b373a24d5828f0c3a1?s=128&d=identicon&r=PG&f=1",
+        "display_name": "BerryGJS",
+        "link": "http://stackoverflow.com/users/5799625/berrygjs"
+      },
+      "is_answered": true,
+      "view_count": 21,
+      "accepted_answer_id": 35187763,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1454533794,
+      "creation_date": 1454533507,
+      "question_id": 35187659,
+      "link": "http://stackoverflow.com/questions/35187659/rails-cant-access-object",
+      "title": "Rails ... Can&#39;t access object?"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "ruby-on-rails",
+        "ajax"
+      ],
+      "owner": {
+        "reputation": 301,
+        "user_id": 528896,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/795fa0491f5a620aca0b9c99b1dcf407?s=128&d=identicon&r=PG",
+        "display_name": "evkwan",
+        "link": "http://stackoverflow.com/users/528896/evkwan"
+      },
+      "is_answered": true,
+      "view_count": 22,
+      "accepted_answer_id": 35181548,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1454514598,
+      "creation_date": 1454513891,
+      "question_id": 35181302,
+      "link": "http://stackoverflow.com/questions/35181302/why-is-my-instance-variable-empty-when-i-refresh-a-partial-via-ajax-request",
+      "title": "Why is my instance variable empty when I refresh a partial via Ajax request?"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "carrierwave"
+      ],
+      "owner": {
+        "reputation": 16,
+        "user_id": 3912172,
+        "user_type": "registered",
+        "accept_rate": 60,
+        "profile_image": "https://www.gravatar.com/avatar/9a01bf9eeb6a20b8bde3d4b865b35a35?s=128&d=identicon&r=PG&f=1",
+        "display_name": "andyrue",
+        "link": "http://stackoverflow.com/users/3912172/andyrue"
+      },
+      "is_answered": true,
+      "view_count": 13,
+      "accepted_answer_id": 35176645,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1454501261,
+      "creation_date": 1454454784,
+      "question_id": 35165619,
+      "link": "http://stackoverflow.com/questions/35165619/remove-carrierwave-file-from-associated-model",
+      "title": "Remove CarrierWave file from associated model"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "json",
+        "devise",
+        "render"
+      ],
+      "owner": {
+        "reputation": 470,
+        "user_id": 1020965,
+        "user_type": "registered",
+        "accept_rate": 92,
+        "profile_image": "https://www.gravatar.com/avatar/017e08215a935ebefaa2220ae463242d?s=128&d=identicon&r=PG",
+        "display_name": "JonathanSimmons",
+        "link": "http://stackoverflow.com/users/1020965/jonathansimmons"
+      },
+      "is_answered": true,
+      "view_count": 1111,
+      "accepted_answer_id": 11763176,
+      "answer_count": 3,
+      "score": 1,
+      "last_activity_date": 1454341692,
+      "creation_date": 1335070455,
+      "question_id": 10265341,
+      "link": "http://stackoverflow.com/questions/10265341/a-missing-attribute-when-using-render-json",
+      "title": "A missing attribute when using { render json: }"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "ruby-on-rails",
+        "ajax",
+        "ruby-on-rails-4"
+      ],
+      "owner": {
+        "reputation": 3588,
+        "user_id": 1805902,
+        "user_type": "registered",
+        "accept_rate": 84,
+        "profile_image": "https://www.gravatar.com/avatar/6bc27f354ad0db73bbf6c96c56cf0a13?s=128&d=identicon&r=PG&f=1",
+        "display_name": "pangpang",
+        "link": "http://stackoverflow.com/users/1805902/pangpang"
+      },
+      "is_answered": true,
+      "view_count": 52,
+      "accepted_answer_id": 32298443,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1454136796,
+      "creation_date": 1440921329,
+      "last_edit_date": 1454136796,
+      "question_id": 32294434,
+      "link": "http://stackoverflow.com/questions/32294434/missing-template-articles-favorite-in-rails",
+      "title": "Missing template articles/favorite in rails"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "rest",
+        "format",
+        "mime",
+        "render"
+      ],
+      "owner": {
+        "reputation": 87,
+        "user_id": 202204,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/dee6de59f979be7ea5af2919c2cd7eed?s=128&d=identicon&r=PG",
+        "display_name": "Tetsuo",
+        "link": "http://stackoverflow.com/users/202204/tetsuo"
+      },
+      "is_answered": true,
+      "view_count": 13132,
+      "accepted_answer_id": 1671173,
+      "answer_count": 5,
+      "score": 11,
+      "last_activity_date": 1454023606,
+      "creation_date": 1257295916,
+      "question_id": 1671111,
+      "link": "http://stackoverflow.com/questions/1671111/methods-for-limiting-the-rails-render-format-to-html",
+      "title": "Methods for limiting the Rails render format to html"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "ruby"
+      ],
+      "owner": {
+        "reputation": 12,
+        "user_id": 5811730,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://www.gravatar.com/avatar/5e63a018006bf9925ef32e34cae79547?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Helban",
+        "link": "http://stackoverflow.com/users/5811730/helban"
+      },
+      "is_answered": true,
+      "view_count": 38,
+      "accepted_answer_id": 35000465,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1453753425,
+      "creation_date": 1453747206,
+      "last_edit_date": 1453748720,
+      "question_id": 34999886,
+      "link": "http://stackoverflow.com/questions/34999886/ruby-on-rails-limit-user-to-endorsecomment-3-other-users-a-month",
+      "title": "Ruby on Rails: Limit user to endorse(comment) 3 other users a month"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 300,
+  "quota_remaining": 247
+}

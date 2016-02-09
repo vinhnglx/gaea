@@ -1,0 +1,5 @@
+{
+  "error_id": 400,
+  "description": "A malformed parameter was passed",
+  "error_name": "bad_parameter"
+}
