@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Hephaistos do
+describe Gaea do
   it 'has a version number' do
-    expect(Hephaistos::VERSION).not_to be nil
+    expect(Gaea::VERSION).not_to be nil
   end
 
   it 'does something useful' do
