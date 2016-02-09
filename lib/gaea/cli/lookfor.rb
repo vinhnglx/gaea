@@ -1,4 +1,4 @@
-module Hephaistos
+module Gaea
   module CLI
     class Lookfor < Thor
     end
