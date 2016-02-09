@@ -19,14 +19,12 @@ RSpec.describe RubyGems do
     describe 'with valid option' do
       let(:gems) { rubygem.gems }
 
-      it 'returns list of gems match with query' do
-        expect(gems).to be_a_kind_of Array
+      it 'creates terminal table object' do
+        expect(gems).to be_an_instance_of Terminal::Table
       end
 
-      [:name, :info, :url, :authors, :downloads].each do |el|
-        it "returns list of gems have element: #{el}" do
-          expect(gems.sample).to have_key(el)
-        end
+      it 'returns a table have 5 columns' do
+        expect(gems.number_of_columns).to eq 5
       end
     end
 

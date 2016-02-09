@@ -2,8 +2,8 @@ require 'spec_helper'
 
 RSpec.describe StackOverFlow do
   include_context 'questions list'
-  let(:stackoverflow) { StackOverFlow.new('something missing', true) }
-  let(:invalid_stackoverflow) { StackOverFlow.new('something right', true) }
+  let(:stackoverflow) { StackOverFlow.new('something missing') }
+  let(:invalid_stackoverflow) { StackOverFlow.new('something right') }
 
   context '.initialize' do
     it 'returns an instance of StackOverFlow object' do
@@ -18,15 +18,16 @@ RSpec.describe StackOverFlow do
   context '.questions' do
     describe 'with valid options' do
       let(:questions) { questions = stackoverflow.questions }
-      it 'returns array list of questions' do
-        expect(questions.count).to eq 10
-        expect(questions).to be_a_kind_of Array
+      it 'creates terminal table object' do
+        expect(questions).to be_an_instance_of Terminal::Table
       end
 
-      [:tags, :owner, :answer_count, :accepted_answer_link, :title, :link].each do |el|
-        it "returns questions list have element: #{el}" do
-          expect(questions.sample).to have_key(el)
-        end
+      it 'returns a table have 4 columns' do
+        expect(questions.number_of_columns).to eq 4
+      end
+
+      it 'returns a table have 10 rows' do
+        expect(questions.rows.count).to eq 10
       end
     end
 

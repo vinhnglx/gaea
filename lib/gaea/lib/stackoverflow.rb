@@ -13,15 +13,14 @@ class StackOverFlow
   # Create constructor for StackOverFlow object.
   #
   # keywords  - The keywords will match all questions.
-  # accepted  - True for questions with accepted answers - False only those without.
   #
   # Examples
   #
   #   StackOverFlow.new('Ruby on Rails')
   #
   # Returns nothing
-  def initialize(keywords, accepted)
-    @options = { query: { pagesize: PAGE_SIZE, q: keywords, accepted: accepted, site: 'stackoverflow' } }
+  def initialize(keywords)
+    @options = { query: { pagesize: PAGE_SIZE, q: keywords, accepted: true, site: 'stackoverflow' } }
   end
 
   # List of ten questions based on attributes.
@@ -66,29 +65,37 @@ class StackOverFlow
       response.code == 200 ? JSON.parse(response.body)['items'] : nil
     end
 
-    # Private: Parse list of raw questions
+    # Private: Create table list of questions
     #
     # Examples
     #
-    #   parse_questions(connect(options))
+    #   parse_questions
+    #   # =>
+    #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
+    #     | Owner         | Title                                                                             | Question                            | Accepted Answer                     |
+    #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
+    #     | Daniel Cukier | Discover errors in Invalid Record factory girl                                    | http://stackoverflow.com/q/23374576 | http://stackoverflow.com/a/23374747 |
+    #     | Chris Mendla  | Rails delete record fails                                                         | http://stackoverflow.com/q/35232445 | http://stackoverflow.com/a/35235143 |
+    #     | Jorrin        | Manually assigning parent ID with has_many/belongs_to association in custom class | http://stackoverflow.com/q/35193155 | http://stackoverflow.com/a/35201406 |
+    #     | simonmorley   | Rails i18n Attributes Not Working via JSON API                                    | http://stackoverflow.com/q/35113584 | http://stackoverflow.com/a/35117092 |
+    #     | NeoP5         | Sonarqube 5.3: Error installing on Oracle 12 - columns missing                    | http://stackoverflow.com/q/34807593 | http://stackoverflow.com/a/35008747 |
+    #     | kannet        | Invalid single-table inheritance type: dog is not a subclass of Pet               | http://stackoverflow.com/q/34988853 | http://stackoverflow.com/a/34989090 |
+    #     | Brittany      | NoMethodError in Users#show error?                                                | http://stackoverflow.com/q/34980742 | http://stackoverflow.com/a/34980943 |
+    #     | Mac           | Python POST binary data                                                           | http://stackoverflow.com/q/14365027 | http://stackoverflow.com/a/14448953 |
+    #     | CuriousMind   | railstutorial.org, Chapter 6. unknown attribute: password                         | http://stackoverflow.com/q/12142374 | http://stackoverflow.com/a/12142417 |
+    #     | Brittany      | Empty database, user already exists message?                                      | http://stackoverflow.com/q/34862365 | http://stackoverflow.com/a/34862683 |
+    #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
     #
-    # Returns list of questions
+    # Returns terminal table object
     def parse_questions
       questions = []
       raws = connect(options)
       unless raws.nil? || raws.empty?
         raws.each do |q|
           owner = q['owner']
-          questions << {
-            tags: q['tags'],
-            owner: { display_name: owner['display_name'], link: owner['link'] },
-            answer_count: q['answer_count'],
-            accepted_answer_link: "http://stackoverflow.com/a/#{q['accepted_answer_id']}",
-            title: q['title'],
-            link: q['link']
-          }
+          questions << [owner['display_name'], q['title'], "http://stackoverflow.com/q/#{q['question_id']}", "http://stackoverflow.com/a/#{q['accepted_answer_id']}"]
         end
-        questions
+        Terminal::Table.new headings: ['Owner', 'Title', 'Question', 'Accepted Answer'], rows: questions
       else
         nil
       end
