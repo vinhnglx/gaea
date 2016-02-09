@@ -1,3 +1,5 @@
 require 'thor'
+require 'httparty'
 require 'gaea/cli/lookfor'
 require 'gaea/lib/stackoverflow'
+require 'gaea/lib/rubygems'

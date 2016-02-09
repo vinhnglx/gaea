@@ -1,5 +1,3 @@
-require 'httparty'
-
 class StackOverFlow
   # Attribute reader
   attr_reader :options
@@ -60,10 +58,10 @@ class StackOverFlow
     #
     # Examples
     #
-    #   raw_questions(options)
+    #   connect(options)
     #
     # Returns the JSON list of raw questions
-    def raw_questions(options)
+    def connect(options)
       response = self.class.get('/2.2/search/advanced', options)
       response.code == 200 ? JSON.parse(response.body)['items'] : nil
     end
@@ -72,12 +70,12 @@ class StackOverFlow
     #
     # Examples
     #
-    #   parse_questions(raw_questions(options))
+    #   parse_questions(connect(options))
     #
     # Returns list of questions
     def parse_questions
       questions = []
-      raws = raw_questions(options)
+      raws = connect(options)
       unless raws.nil? || raws.empty?
         raws.each do |q|
           owner = q['owner']

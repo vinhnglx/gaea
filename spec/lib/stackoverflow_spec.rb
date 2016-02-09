@@ -1,16 +1,16 @@
 require 'spec_helper'
 
 RSpec.describe StackOverFlow do
-  include_context "questions list"
+  include_context 'questions list'
   let(:stackoverflow) { StackOverFlow.new('something missing', true) }
   let(:invalid_stackoverflow) { StackOverFlow.new('something right', true) }
 
   context '.initialize' do
-    it 'returns an constructor of StackOverFlow object' do
+    it 'returns an instance of StackOverFlow object' do
       expect(stackoverflow).to be_an_instance_of StackOverFlow
     end
 
-    it 'returns attribute reader options' do
+    it 'returns constructor of StackOverFlow object' do
       expect(stackoverflow.options).to eq({ query: { pagesize: 10, q: 'something missing', accepted: true, site: 'stackoverflow' } })
     end
   end
