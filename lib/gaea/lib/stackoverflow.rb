@@ -69,7 +69,7 @@ class StackOverFlow
     #
     # Examples
     #
-    #   parse_questions(connect(options))
+    #   parse_questions
     #   # =>
     #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
     #     | Owner         | Title                                                                             | Question                            | Accepted Answer                     |
