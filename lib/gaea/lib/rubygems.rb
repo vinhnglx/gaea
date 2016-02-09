@@ -48,21 +48,27 @@ class RubyGems
       response.code == 200 ? JSON.parse(response.body) : nil
     end
 
+    # Private: Create table list of gems
+    #
+    # Examples
+    #
+    #   parse_gems
+    #   # =>
+    #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
+    #     | Name | Info                                          | URL                              | Authors     | Downloads |
+    #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
+    #     | weer | Display the weather information of your city. | https://github.com/vinhnglx/weer | Vinh Nguyen | 134       |
+    #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
+    #
+    # Returns terminal table object
     def parse_gems
       gems = []
       raws = connect(option)
-
       unless raws.nil? || raws.empty?
         raws.each do |g|
-          gems << {
-            name: g['name'],
-            info: g['info'],
-            url: g['project_uri'],
-            authors: g['authors'],
-            downloads: g['downloads']
-          }
+          gems << [g['name'], g['info'][0..60], g['project_uri'], g['authors'], g['downloads']]
         end
-        gems
+        Terminal::Table.new headings: ['Name', 'Info', 'URL', 'Authors', 'Downloads'], rows: gems
       else
         nil
       end
