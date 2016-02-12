@@ -3,6 +3,7 @@ require 'spec_helper'
 RSpec.describe Confreaks do
   include_context 'confreaks list'
   let(:conf) { Confreaks.new("2015") }
+  let(:invalid_conf) { Confreaks.new("820982039") }
 
   context '.initialize' do
     it 'returns an instance of Confreaks object' do
@@ -32,6 +33,13 @@ RSpec.describe Confreaks do
 
       it 'creates terminal table object' do
         expect(conf.events_of_year).to be_an_instance_of Terminal::Table
+      end
+    end
+
+    context 'with invalid year' do
+      it 'returns nil if the year argument invalid' do
+        expect(invalid_conf.events_of_year).to be_nil
+        expect(invalid_conf.events_of_year('python')).to be_nil
       end
     end
   end

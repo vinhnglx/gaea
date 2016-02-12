@@ -27,9 +27,18 @@ class Confreaks
   # Examples
   #
   #   conf = Confreaks.new('2015')
-  #   conf.events_of_year
+  #   conf.events_of_year or conf.events_of_year
+  #   # =>
+  #   +-----------------------------+------------------------------------------------------+------------+------------+
+  #   | Event                       | Link                                                 | Start date | End date   |
+  #   +-----------------------------+------------------------------------------------------+------------+------------+
+  #   | Ruby Kaigi 2015             | http://confreaks.tv/events/rubykaigi2015             | 2015-12-11 | 2015-12-13 |
+  #   | Alter Conf Los Angeles 2015 | http://confreaks.tv/events/alterconf2015-los-angeles | 2015-11-21 | 2015-11-21 |
+  #   | DockerCon EU 2015           | http://confreaks.tv/events/Dockerconeu2015           | 2015-11-15 | 2015-11-17 |
+  #   | Ruby Conference 2015        | http://confreaks.tv/events/rubyconf2015              | 2015-11-15 | 2015-11-17 |
+  #   +-----------------------------+------------------------------------------------------+------------+------------+
   #
-  # Returns Array of events
+  # Returns the table
   def events_of_year(field = nil)
     results = field ? events.select!{ |event| event['short_code'].downcase.include? field } : events
 
@@ -53,6 +62,7 @@ class Confreaks
         events.each do |event|
           event_rows << [event['display_name'], "http://confreaks.tv/events/#{event['short_code']}", event_date(event['start_at']), event_date(event['end_at'])] if event_of_year?(event['short_code'])
         end
+        return nil if event_rows.empty?
         Terminal::Table.new headings: ['Event', 'Link', 'Start date', 'End date'], rows: event_rows
       else
         nil

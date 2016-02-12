@@ -30,22 +30,24 @@ class StackOverFlow
   #   stackoverflow = StackOverFlow.new('activerecord nomethod error', true)
   #   stackoverflow.questions
   #   # =>
-  #     [
-  #       {
-  #         'tags': ['ruby-on-rails', 'ruby'],
-  #         'owner': { 'display_name': 'johndoe', 'link': 'http://stackoverflow.com/users/2398/johndoe'},
-  #         'answer_count': 14,
-  #         'accepted_answer_link': 'http://stackoverflow.com/a/21420719/',
-  #         'title': 'PG::ConnectionBad - could not connect to server: Connection refused',
-  #         'link': 'http://stackoverflow.com/questions/19828385/pgconnectionbad-could-not-connect-to-server-connection-refused'
-  #       },
-  #       {
-  #         ....
-  #       },
-  #     ]
+  #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
+  #     | Owner         | Title                                                                             | Question                            | Accepted Answer                     |
+  #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
+  #     | Daniel Cukier | Discover errors in Invalid Record factory girl                                    | http://stackoverflow.com/q/23374576 | http://stackoverflow.com/a/23374747 |
+  #     | Chris Mendla  | Rails delete record fails                                                         | http://stackoverflow.com/q/35232445 | http://stackoverflow.com/a/35235143 |
+  #     | Jorrin        | Manually assigning parent ID with has_many/belongs_to association in custom class | http://stackoverflow.com/q/35193155 | http://stackoverflow.com/a/35201406 |
+  #     | simonmorley   | Rails i18n Attributes Not Working via JSON API                                    | http://stackoverflow.com/q/35113584 | http://stackoverflow.com/a/35117092 |
+  #     | NeoP5         | Sonarqube 5.3: Error installing on Oracle 12 - columns missing                    | http://stackoverflow.com/q/34807593 | http://stackoverflow.com/a/35008747 |
+  #     | kannet        | Invalid single-table inheritance type: dog is not a subclass of Pet               | http://stackoverflow.com/q/34988853 | http://stackoverflow.com/a/34989090 |
+  #     | Brittany      | NoMethodError in Users#show error?                                                | http://stackoverflow.com/q/34980742 | http://stackoverflow.com/a/34980943 |
+  #     | Mac           | Python POST binary data                                                           | http://stackoverflow.com/q/14365027 | http://stackoverflow.com/a/14448953 |
+  #     | CuriousMind   | railstutorial.org, Chapter 6. unknown attribute: password                         | http://stackoverflow.com/q/12142374 | http://stackoverflow.com/a/12142417 |
+  #     | Brittany      | Empty database, user already exists message?                                      | http://stackoverflow.com/q/34862365 | http://stackoverflow.com/a/34862683 |
+  #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
   #
-  # Returns the JSON list of questions
+  # Returns the table
   def questions
+    # TODO: need to get more questions - Apply paginates
     parse_questions
   end
 
@@ -70,21 +72,6 @@ class StackOverFlow
     # Examples
     #
     #   parse_questions
-    #   # =>
-    #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
-    #     | Owner         | Title                                                                             | Question                            | Accepted Answer                     |
-    #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
-    #     | Daniel Cukier | Discover errors in Invalid Record factory girl                                    | http://stackoverflow.com/q/23374576 | http://stackoverflow.com/a/23374747 |
-    #     | Chris Mendla  | Rails delete record fails                                                         | http://stackoverflow.com/q/35232445 | http://stackoverflow.com/a/35235143 |
-    #     | Jorrin        | Manually assigning parent ID with has_many/belongs_to association in custom class | http://stackoverflow.com/q/35193155 | http://stackoverflow.com/a/35201406 |
-    #     | simonmorley   | Rails i18n Attributes Not Working via JSON API                                    | http://stackoverflow.com/q/35113584 | http://stackoverflow.com/a/35117092 |
-    #     | NeoP5         | Sonarqube 5.3: Error installing on Oracle 12 - columns missing                    | http://stackoverflow.com/q/34807593 | http://stackoverflow.com/a/35008747 |
-    #     | kannet        | Invalid single-table inheritance type: dog is not a subclass of Pet               | http://stackoverflow.com/q/34988853 | http://stackoverflow.com/a/34989090 |
-    #     | Brittany      | NoMethodError in Users#show error?                                                | http://stackoverflow.com/q/34980742 | http://stackoverflow.com/a/34980943 |
-    #     | Mac           | Python POST binary data                                                           | http://stackoverflow.com/q/14365027 | http://stackoverflow.com/a/14448953 |
-    #     | CuriousMind   | railstutorial.org, Chapter 6. unknown attribute: password                         | http://stackoverflow.com/q/12142374 | http://stackoverflow.com/a/12142417 |
-    #     | Brittany      | Empty database, user already exists message?                                      | http://stackoverflow.com/q/34862365 | http://stackoverflow.com/a/34862683 |
-    #     +---------------+-----------------------------------------------------------------------------------+-------------------------------------+-------------------------------------+
     #
     # Returns terminal table object
     def parse_questions

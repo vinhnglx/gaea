@@ -26,9 +26,15 @@ class RubyGems
   #
   #   rgs = RubyGems.new('weather')
   #   rgs.gems
-  #
-  # Returns an Array of JSON of gems that match.
+  #   # =>
+  #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
+  #     | Name | Info                                          | URL                              | Authors     | Downloads |
+  #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
+  #     | weer | Display the weather information of your city. | https://github.com/vinhnglx/weer | Vinh Nguyen | 134       |
+  #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
+  # Returns the table
   def gems
+    # TODO: need to get more questions - Apply paginates
     parse_gems
   end
 
@@ -53,12 +59,6 @@ class RubyGems
     # Examples
     #
     #   parse_gems
-    #   # =>
-    #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
-    #     | Name | Info                                          | URL                              | Authors     | Downloads |
-    #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
-    #     | weer | Display the weather information of your city. | https://github.com/vinhnglx/weer | Vinh Nguyen | 134       |
-    #     +------+-----------------------------------------------+----------------------------------+-------------+-----------+
     #
     # Returns terminal table object
     def parse_gems
