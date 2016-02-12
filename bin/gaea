@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 
 require 'gaea'
+Gaea::CLI::Lookfor.start(ARGV)
