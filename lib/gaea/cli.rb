@@ -1,5 +1,6 @@
 require 'thor'
 require 'httparty'
+require 'rainbow'
 require 'terminal-table'
 require 'gaea/cli/lookfor'
 require 'gaea/lib/stackoverflow'
