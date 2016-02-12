@@ -21,3 +21,11 @@ shared_context 'gems list' do
       to_return(status: 200, body: File.open(File.dirname(__FILE__) + '/fixtures/' + 'nil_gem.json', 'rb').read, headers: {})
   end
 end
+
+shared_context 'confreaks list' do
+  before do
+    stub_request(:get, "http://confreaks.tv/api/v1/events.json").
+      with(headers: {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
+      to_return(status: 200, body: File.open(File.dirname(__FILE__) + '/fixtures/' + 'events.json', 'rb').read, headers: {})
+  end
+end
