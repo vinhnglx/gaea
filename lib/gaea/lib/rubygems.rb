@@ -62,13 +62,13 @@ class RubyGems
     #
     # Returns terminal table object
     def parse_gems
-      gems = []
+      gem_rows = []
       raws = connect(option)
       unless raws.nil? || raws.empty?
         raws.each do |g|
-          gems << [g['name'], g['info'][0..60], g['project_uri'], g['authors'], g['downloads']]
+          gem_rows << [g['name'], g['info'][0..60], g['project_uri'], g['authors'], g['downloads']]
         end
-        Terminal::Table.new headings: ['Name', 'Info', 'URL', 'Authors', 'Downloads'], rows: gems
+        Terminal::Table.new headings: ['Name', 'Info', 'URL', 'Authors', 'Downloads'], rows: gem_rows
       else
         nil
       end

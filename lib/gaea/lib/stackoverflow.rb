@@ -88,14 +88,14 @@ class StackOverFlow
     #
     # Returns terminal table object
     def parse_questions
-      questions = []
+      question_rows = []
       raws = connect(options)
       unless raws.nil? || raws.empty?
         raws.each do |q|
           owner = q['owner']
-          questions << [owner['display_name'], q['title'], "http://stackoverflow.com/q/#{q['question_id']}", "http://stackoverflow.com/a/#{q['accepted_answer_id']}"]
+          question_rows << [owner['display_name'], q['title'], "http://stackoverflow.com/q/#{q['question_id']}", "http://stackoverflow.com/a/#{q['accepted_answer_id']}"]
         end
-        Terminal::Table.new headings: ['Owner', 'Title', 'Question', 'Accepted Answer'], rows: questions
+        Terminal::Table.new headings: ['Owner', 'Title', 'Question', 'Accepted Answer'], rows: question_rows
       else
         nil
       end
