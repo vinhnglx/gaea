@@ -1,0 +1,1 @@
+class OptionMissing < StandardError; end
