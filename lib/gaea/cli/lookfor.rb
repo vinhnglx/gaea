@@ -10,7 +10,7 @@ module Gaea
       #   year(optional)     - The year - will use with source confreaks
       #
       # Returns the results depend on source and keyword
-      desc 'lookfor', 'Search from multiple sources'
+      desc 'looksfor', 'Search from multiple sources'
       option :keyword, aliases: '-k', banner: 'The keyword relate to contents you wanna search'
       option :source, aliases: '-s', banner: 'The source - 3 default values: stackoverflow, gems and confreaks'
       option :year, aliases: '-y', banner: 'The year - only avalaible with source confreaks'
