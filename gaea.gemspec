@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["vinh.nglx@gmail.com"]
 
   spec.summary       = %q{Gaea - Simple search CLI tool.}
-  spec.description   = %q{Search everything from StackOverFlow, Rubygems.}
+  spec.description   = %q{Search information from StackOverFlow, Rubygems, Confreaks.}
   spec.homepage      = "http://www.todayifoundout.net/"
   spec.license       = "MIT"
 
