@@ -16,11 +16,12 @@ module Gaea
       option :year, aliases: '-y', banner: 'The year - only avalaible with source confreaks'
       def looksfor
         keyword = options[:keyword]
+        source  = options[:source]
 
-        results = case options[:source]
-                  when 'stackoverflow'
+        results = case source
+                  when 'stackoverflow', 'askubuntu', 'serverfault', 'superuser'
                     raise OptionMissing, 'Oops, man, make sure you have the keyword option in your command' unless keyword
-                    stack = StackOverFlow.new(keyword)
+                    stack = StackOverFlow.new(keyword, source)
                     stack.questions
                   when 'gems'
                     raise OptionMissing, 'Oops, man, make sure you have the keyword option in your command' unless keyword
