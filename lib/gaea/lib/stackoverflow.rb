@@ -16,7 +16,7 @@ class StackOverFlow
   #
   # Examples
   #
-  #   StackOverFlow.new('Ruby on Rails')
+  #   StackOverFlow.new('Ruby on Rails', 'stackoverflow')
   #
   # Returns nothing
   def initialize(keywords, site)

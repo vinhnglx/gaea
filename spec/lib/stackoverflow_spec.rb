@@ -2,8 +2,8 @@ require 'spec_helper'
 
 RSpec.describe StackOverFlow do
   include_context 'questions list'
-  let(:stackoverflow) { StackOverFlow.new('something missing') }
-  let(:invalid_stackoverflow) { StackOverFlow.new('something right') }
+  let(:stackoverflow) { StackOverFlow.new('something missing', 'stackoverflow') }
+  let(:invalid_stackoverflow) { StackOverFlow.new('something right', 'stackoverflow') }
 
   context '.initialize' do
     it 'returns an instance of StackOverFlow object' do
